@@ -4,6 +4,7 @@
   "description": "Walrus ESLint 规则",
   "main": "index.js",
   "files": [
+    "base.js",
     "index.js",
     "react.js",
     "typescript.js",
