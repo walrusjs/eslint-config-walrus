@@ -51,7 +51,7 @@ ESLint 的配置多达几百条，逐个查阅是一项非常繁重的工作，�
 安装：
 
 ```bash
-npm install --save-dev eslint babel-eslint eslint-config-alloy
+npm install --save-dev eslint babel-eslint @walrus/eslint-config
 ```
 
 在你的项目根目录下创建 `.eslintrc.js`，并将以下内容复制到文件中：
@@ -59,7 +59,7 @@ npm install --save-dev eslint babel-eslint eslint-config-alloy
 ```js
 module.exports = {
     extends: [
-        'alloy',
+        '@walrus/eslint-config',
     ],
     env: {
         // 这里填入你的项目用到的环境
@@ -88,7 +88,7 @@ module.exports = {
 安装：
 
 ```bash
-npm install --save-dev eslint babel-eslint eslint-plugin-react eslint-config-alloy
+npm install --save-dev eslint babel-eslint eslint-plugin-react @walrus/eslint-config
 ```
 
 在你的项目根目录下创建 `.eslintrc.js`，并将以下内容复制到文件中：
@@ -96,8 +96,8 @@ npm install --save-dev eslint babel-eslint eslint-plugin-react eslint-config-all
 ```js
 module.exports = {
     extends: [
-        'alloy',
-        'alloy/react',
+        '@walrus/eslint-config',
+        '@walrus/eslint-config/react',
     ],
     env: {
         // 这里填入你的项目用到的环境
@@ -126,7 +126,7 @@ module.exports = {
 安装：
 
 ```bash
-npm install --save-dev eslint babel-eslint vue-eslint-parser@5.0.0 eslint-plugin-vue eslint-config-alloy
+npm install --save-dev eslint babel-eslint vue-eslint-parser@5.0.0 eslint-plugin-vue @walrus/eslint-config
 ```
 
 注意：由于[这个原因](https://github.com/mysticatea/vue-eslint-parser/issues/46)，不能使用最新版的 vue-eslint-parser，必须使用 5.0.0 版本。
@@ -136,8 +136,8 @@ npm install --save-dev eslint babel-eslint vue-eslint-parser@5.0.0 eslint-plugin
 ```js
 module.exports = {
     extends: [
-        'alloy',
-        'alloy/vue',
+        '@walrus/eslint-config',
+        '@walrus/eslint-config/vue',
     ],
     env: {
         // 这里填入你的项目用到的环境
@@ -166,7 +166,7 @@ module.exports = {
 安装：
 
 ```bash
-npm install --save-dev eslint typescript @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint-config-alloy
+npm install --save-dev eslint typescript @typescript-eslint/parser @typescript-eslint/eslint-plugin @walrus/eslint-config
 ```
 
 在你的项目根目录下创建 `.eslintrc.js`，并将以下内容复制到文件中：
@@ -174,8 +174,8 @@ npm install --save-dev eslint typescript @typescript-eslint/parser @typescript-e
 ```js
 module.exports = {
     extends: [
-        'alloy',
-        'alloy/typescript',
+        '@walrus/eslint-config',
+        '@walrus/eslint-config/typescript',
     ],
     env: {
         // 这里填入你的项目用到的环境
@@ -204,7 +204,7 @@ module.exports = {
 安装：
 
 ```bash
-npm install --save-dev eslint typescript @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint-plugin-react eslint-config-alloy
+npm install --save-dev eslint typescript @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint-plugin-react @walrus/eslint-config
 ```
 
 在你的项目根目录下创建 `.eslintrc.js`，并将以下内容复制到文件中：
@@ -212,9 +212,9 @@ npm install --save-dev eslint typescript @typescript-eslint/parser @typescript-e
 ```js
 module.exports = {
     extends: [
-        'alloy',
-        'alloy/react',
-        'alloy/typescript',
+        '@walrus/eslint-config',
+        '@walrus/eslint-config/react',
+        '@walrus/eslint-config/typescript',
     ],
     env: {
         // 这里填入你的项目用到的环境
@@ -284,9 +284,9 @@ module.exports = {
 
 ### 如何结合 Prettier 使用
 
-AlloyTeam ESLint 规则从 v3 开始，已经不包含所有样式相关的规则了，故不需要引入 `eslint-config-prettier`。只需要安装 `prettier` 及相关 VSCode 插件即可。
+Walrus ESLint 规则不包含所有样式相关的规则。只需要安装 `prettier` 及相关 VSCode 插件即可。
 
-下面给出一个 AlloyTeam 使用的 `prettier.config.js` 配置，仅供参考：
+下面给出一个 Walrus 使用的 `prettier.config.js` 配置，仅供参考：
 
 ```js
 // prettier.config.js or .prettierrc.js

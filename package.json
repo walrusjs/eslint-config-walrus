@@ -3,6 +3,12 @@
   "version": "1.0.0",
   "description": "Walrus ESLint 规则",
   "main": "index.js",
+  "files": [
+    "index.js",
+    "react.js",
+    "typescript.js",
+    "vue.js"
+  ],
   "scripts": {
     "start": "npm run dev",
     "dev": "run-p dev:eslintrc dev:site",
