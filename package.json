@@ -1,0 +1,96 @@
+{
+  "name": "@walrus/eslint-config",
+  "version": "1.0.0",
+  "description": "Walrus ESLint 规则",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run dev",
+    "dev": "run-p dev:eslintrc dev:site",
+    "dev:eslintrc": "nodemon",
+    "dev:site": "parcel site/index.html --out-dir .cache",
+    "build": "run-s build:eslintrc build:site",
+    "build:eslintrc": "ts-node scripts/build.ts",
+    "build:site": "run-s clear:dist build:html",
+    "clear:dist": "rimraf ./dist",
+    "build:html": "parcel build site/index.html --public-url ./",
+    "test": "npm run lint && ts-node ./test/index.ts",
+    "lint": "run-s eslint prettier",
+    "eslint": "eslint --ext .js,.jsx,.ts,.tsx,.vue --ignore-pattern \"bad.*\" .",
+    "prettier": "prettier -l \"./**/*\"",
+    "prettier:fix": "prettier --write -l \"./**/*\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/walrus-plus/eslint-config-walrus.git"
+  },
+  "keywords": [
+    "eslint",
+    "eslintrc",
+    "eslintconfig",
+    "config",
+    "alloy",
+    "alloyteam",
+    "javascript",
+    "styleguide",
+    "react",
+    "vue",
+    "typescript"
+  ],
+  "author": "wangxingkang <wang_xingkang@qq.com>",
+  "contributors": [],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/walrus-plus/eslint-config-walrus/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm test",
+      "pre-push": "npm test"
+    }
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/doctrine": "0.0.3",
+    "@types/eslint": "^6.1.2",
+    "@types/node": "^12.12.3",
+    "@types/prettier": "^1.16.4",
+    "@types/react": "^16.8.18",
+    "@types/react-dom": "^16.8.4",
+    "@types/react-tooltip": "^3.9.3",
+    "@types/rimraf": "^2.0.2",
+    "@types/xml-escape": "^1.1.0",
+    "@typescript-eslint/eslint-plugin": "^2.0.0",
+    "@typescript-eslint/parser": "^2.0.0",
+    "babel-eslint": "^10.0.1",
+    "doctrine": "^3.0.0",
+    "eslint": "^6.2.2",
+    "eslint-config-prettier": "^6.1.0",
+    "eslint-plugin-react": "^7.14.2",
+    "eslint-plugin-vue": "^5.2.3",
+    "husky": "^3.0.4",
+    "insert-tag": "^0.1.2",
+    "mobi-plugin-color": "^1.0.0",
+    "mobi.css": "^3.1.1",
+    "nodemon": "^1.17.5",
+    "npm-run-all": "^4.1.5",
+    "parcel-bundler": "^1.12.3",
+    "prettier": "^1.17.1",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-tooltip": "^3.10.0",
+    "rimraf": "^3.0.0",
+    "ts-node": "^7.0.1",
+    "typescript": "^3.6.2",
+    "vue-eslint-parser": "^5.0.0",
+    "xml-escape": "^1.1.0"
+  },
+  "greenkeeper": {
+    "ignore": [
+      "ts-node",
+      "vue-eslint-parser"
+    ]
+  }
+}

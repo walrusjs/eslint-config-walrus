@@ -1,0 +1,27 @@
+## OS
+.DS_Store
+.idea
+.editorconfig
+package-lock.json
+yarn.lock
+
+# Ignored suffix
+*.log
+*.md
+*.svg
+*.png
+*ignore
+
+## Local
+site/vendor
+test/index/no-cond-assign/bad.js
+test/index/no-irregular-whitespace/bad.js
+test/index/no-labels/bad.js
+test/react/jsx-fragments/bad.js
+test/index/no-sequences/bad.js
+test/index/no-useless-rename/bad.js
+test/react/self-closing-comp/bad.js
+
+## Built-files
+.cache
+dist
