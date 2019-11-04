@@ -19,7 +19,7 @@ export const App: React.SFC = () => {
   const Header = (
     <div className="flex-center">
       <div className="container-fluid">
-        <h1>AlloyTeam ESLint 规则</h1>
+        <h1>Walrus ESLint 规则</h1>
         <form className="top-gap site-form">
           <select
             value={namespace}
